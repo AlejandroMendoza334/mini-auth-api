@@ -11,6 +11,10 @@ const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 app.use(cors());
+app.get("/", (req, res) => {
+  res.send("🚀 MiniAuth API corriendo en línea");
+});
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
